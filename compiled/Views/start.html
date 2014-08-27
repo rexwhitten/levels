@@ -1,0 +1,46 @@
+﻿@Master['_layout.html']
+
+
+@Section['Content']
+<div class="row">
+    <h2>Start</h2>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col-md-4" style="min-height:440px;">
+        <h1>Welcome to Levels</h1>
+        <p>
+        <h3 style="color:aqua">Are you new???</h3>
+        <a href="/register">Register!</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        Login
+        <div class="">
+            <form role="form" method="post" action="/game/login" id="login_form">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Player Name</label>
+                    <input type="email" class="form-control" name="_email" placeholder="Enter your player name!">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" name="_password" placeholder="Password" >
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+        @If.Has_errors
+            @Each._errors
+            <div class="alert alert-danger">@Current</div>
+            @EndEach
+        @EndIf 
+    </div>
+    <div class="col-md-4"></div>
+</div>
+</div>
+<script type="text/javascript">
+    
+
+
+</script>
+@EndSection

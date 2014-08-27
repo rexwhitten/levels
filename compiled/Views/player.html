@@ -1,0 +1,136 @@
+﻿@Master['_layout.html']
+
+
+@Section['Content']
+ <h2 class="pull-right" style="color: #808080; font-family: 'VT323', cursive !important;">@Model.user.Email</h2>
+    <div class="container" style="min-height: 840px; width: 100%; padding: 24px;">
+        <!-- Loading Row -->
+        <div class="row  view-row" id="loading_row" style="text-align: center; padding-top: 200px; font-family: 'Press Start 2P'">
+            <h1 style="font-family: 'Press Start 2P'">Loading...</h1>
+
+        </div>
+
+        <!-- Question Row -->
+        <div class="row hidden view-row" id="question_row" style="text-align: center; padding-top: 200px; font-family: 'Press Start 2P'">
+            <div class="row">
+                <h2 id="_question_title" style="font-family: 'Press Start 2P'">Question 1</h2>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4" id="_question_text" data-math-syntax="console.log('nope')">
+                        <div>
+                        <span id="_op_1">12</span>
+                        <span id="_op_operator">+</span>
+                        <span id="_op_2">14</span>
+                        <span>=</span>
+                            <input id="answer" type="text" class="form-control input-lg answer_Box" style="margin-top:10px;" />
+                        </div>
+                        <br />
+                        <div>
+                        <a id="_question_next" class="btn btn-primary btn-lg answer_button btn-block">Answer</a>
+                        <div class="alert" id="results" style="width:90%;"></div>
+                        <div id="_question_score_" data-current-score="0"></div>
+                        </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <!-- Levels Row -->
+        <div class="row hidden view-row" id="level_row" style="padding-top: 50px; font-family: 'Press Start 2P'">
+            <div class="row" style="color: #b6ff00;">
+                <div class="col-sm-1" style="opacity: 0.25; font-size: small; margin-left: 15px;">Day</div>
+                <div class="col-sm-1" style="opacity: 0.25; font-size: small; margin-left: 25px;">Monday</div>
+                <div class="col-sm-1" style="opacity: 0.25; font-size: small; margin-left: 20px;">Tuesday</div>
+                <div class="col-sm-1" style="opacity: 0.25; font-size: small; margin-left: 20px;">Wenseday</div>
+                <div class="col-sm-1" style="opacity: 0.25; font-size: small; margin-left: 15px;">Thursday</div>
+                <div class="col-sm-1" style="opacity: 0.25; font-size: small; margin-left: 15px;">Friday</div>
+                <div class="col-sm-1" style="opacity: 0.25; font-size: small; margin-left: 15px;">Achievements</div>
+            </div>
+            <div class="row" id="level_1">
+                <div data-level="1" id="l_1" class="col-sm-1 cell-level">Level 1</div>
+                <div data-level="1" id="q_1" class="col-sm-1 cell cell-state-normal cell-locked">1</div>
+                <div data-level="1" id="q_2" class="col-sm-1 cell cell-state-normal cell-locked">2</div>
+                <div data-level="1" id="q_3" class="col-sm-1 cell cell-state-normal cell-locked">3</div>
+                <div data-level="1" id="q_4" class="col-sm-1 cell cell-state-normal cell-locked">4</div>
+                <div data-level="1" id="q_5" class="col-sm-1 cell cell-state-normal cell-locked" data-last-step="true">5</div>
+                <div data-level="1" id="l_1_acheivements" class="col-sm-5">
+                    <div>
+                        <h2 style="font-family: 'VT323', cursive !important;">Computer Time!</h2>
+                        <i style="color: #808080" class="fa fa-rocket fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="level_2">
+                <div data-level="2" id="l_2" class="col-sm-1 cell-level">Level 2</div>
+                <div data-level="2" id="q_6" class="col-sm-1 cell cell-state-normal cell-locked">1</div>
+                <div data-level="2" id="q_7" class="col-sm-1 cell cell-state-normal cell-locked">2</div>
+                <div data-level="2" id="q_8" class="col-sm-1 cell cell-state-normal cell-locked">3</div>
+                <div data-level="2" id="q_9" class="col-sm-1 cell cell-state-normal cell-locked">4</div>
+                <div data-level="2" id="q_10" class="col-sm-1 cell cell-state-normal cell-locked" data-last-step="true">5</div>
+                <div data-level="2" id="l_2_acheivements" class="col-sm-5">
+                    <div>
+                        <h3 style="font-family: 'VT323', cursive !important;">Prize Box!</h3>
+                        <i style="color: #808080" class="fa fa-rocket fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="level_3">
+                <div data-level="3" id="l_3" class="col-sm-1 cell-level">Level 3</div>
+                <div data-level="3" id="q_11" class="col-sm-1 cell cell-state-normal cell-locked">1</div>
+                <div data-level="3" id="q_12" class="col-sm-1 cell cell-state-normal cell-locked">2</div>
+                <div data-level="3" id="q_13" class="col-sm-1 cell cell-state-normal cell-locked">3</div>
+                <div data-level="3" id="q_14" class="col-sm-1 cell cell-state-normal cell-locked">4</div>
+                <div data-level="3" id="q_15" class="col-sm-1 cell cell-state-normal cell-locked" data-last-step="true">5</div>
+                <div id="l_3_acheivements" class="col-sm-5">
+                    <div>
+                        <h3 style="font-family: 'VT323', cursive !important;">iPad !</h3>
+                        <i style="color: #808080" class="fa fa-star fa-3x"></i>
+                        <i style="color: #808080" class="fa fa-rocket fa-3x"></i>
+                        <i style="color: #808080" class="fa fa-bug fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="level_4">
+                <div data-level="4" id="l_4" class="col-sm-1 cell-level">Level 4</div>
+                <div data-level="4" id="q_16" class="col-sm-1 cell cell-state-normal cell-locked">1</div>
+                <div data-level="4" id="q_17" class="col-sm-1 cell cell-state-normal cell-locked">2</div>
+                <div data-level="4" id="q_18" class="col-sm-1 cell cell-state-normal cell-locked">3</div>
+                <div data-level="4" id="q_19" class="col-sm-1 cell cell-state-normal cell-locked">4</div>
+                <div data-level="4" id="q_20" class="col-sm-1 cell cell-state-normal cell-locked" data-last-step="true">5</div>
+                <div id="l_4_acheivements" class="col-sm-5">
+                    <div>
+                        <h3 style="font-family: 'VT323', cursive !important;">Sachnin!</h3>
+                        <i style="color: #808080" class="fa fa-star fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="level_5">
+                <div data-level="5" id="l_5" class="col-sm-1 cell-level">Level 5</div>
+                <div data-level="5" id="q_21" class="col-sm-1 cell cell-state-normal cell-locked">1</div>
+                <div data-level="5" id="q_22" class="col-sm-1 cell cell-state-normal cell-locked">2</div>
+                <div data-level="5" id="q_23" class="col-sm-1 cell cell-state-normal cell-locked">3</div>
+                <div data-level="5" id="q_24" class="col-sm-1 cell cell-state-normal cell-locked">4</div>
+                <div data-level="5" id="q_25" class="col-sm-1 cell cell-state-normal cell-locked" data-last-step="true">5</div>
+                <div id="l_5_acheivements" class="col-sm-5">
+                    <div>
+                        <h3 style="font-family: 'VT323', cursive !important;">Free time! (15 min)</h3>
+                        <i style="color: #808080" class="fa fa-rocket fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    var user_id = @Model.user.Id;
+    var user_score_level = @Model.user.Scorelevel;
+    console.log(user_id);
+    console.log(user_score_level);
+
+    Game.Load(user_id,user_score_level);
+</script>
+@EndSection
